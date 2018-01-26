@@ -1,0 +1,344 @@
+/* PROBNI SAJT by Daniel Fazlijevic, januar 2018. #4b00d6  #9536d4*/
+
+:root {
+    --color-purple: #8301fc;
+}
+
+body {
+    background-color: #01000a;
+    font-family: 'Anonymous Pro', monospace;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+body:after {
+    content: "";
+    background-image: url("images/graphy-dark.png");
+    opacity: 0.43;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.nav-link {
+    border: 1px dashed transparent;
+    z-index: 99;
+}
+
+.hamburger-icon {
+    display: none;
+    color: var(--color-purple);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 99;
+}
+
+.about a {
+    color: var(--color-purple);
+}
+
+.about a:hover,
+.link:hover {
+    background-color: rgb(161, 61, 255);
+    color: black;
+}
+
+.thumbnail img {
+    max-width: 200px;
+}
+
+.btn-prijava {
+    
+    background: #ec008c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#fc6767), to(#ec008c));
+    background: -webkit-linear-gradient(left, #fc6767, #ec008c);
+    background: -o-linear-gradient(left, #fc6767, #ec008c);
+    background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.btn-prijava:hover {
+    -webkit-box-shadow: 0px 1px 20px rgb(231, 79, 224);
+            box-shadow: 0px 1px 20px rgb(231, 79, 224);
+    color: #fff;
+}
+
+.orange-line {
+    background-color: var(--color-purple);
+    width: 14%;
+    float: left;
+    height: 2px;
+}
+
+@-webkit-keyframes slideDown {
+    0% {
+        transform: translateY(-60%);
+        -webkit-transform: translateY(-60%);
+        -moz-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+        -o-transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-60%);
+        -webkit-transform: translateY(-60%);
+        -moz-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+        -o-transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+.partners-img {
+    max-width: 200px;
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+    transition: opacity 0.2s, -webkit-transform 0.3s;
+    -o-transition: transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+}
+
+.cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+        transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+        transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+        transform: translateX(0px);
+}
+
+.loadedcontent {
+    display: none;
+}
+
+#console {
+    font-size: 70%;
+}
+
+.question {
+    border: 1px solid rgb(115, 30, 250);
+    border-left-width: 4px;
+    font-size: 105%;
+    background-color:rgb(115, 30, 250);
+}
+
+.answer {
+    border: 1px solid rgb(115, 30, 250);
+    border-left-width: 4px;
+}
+
+.question:before {
+    content: " Q: ";
+    color: white;
+}
+
+.question:after {
+    content: "I";
+    font-size: 3px;
+    position: relative;
+    right: 50%;
+    color: rgb(115, 30, 250);
+    top: 20px;
+    padding: 9px 0 4px 0;
+    height: 9px;
+    background-color: rgb(115, 30, 250);
+}
+
+.answer {
+    margin-left: 25px;
+}
+
+.answer:before {
+    content: " A: ";
+    color: white;
+}
+
+h2 {
+    font-family: monospace;
+}
+
+.text-muted2 {
+    color: #3b3b3b60;
+}
+
+.logo {
+    width: 300px;
+}
+
+.nav-colored {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.nav-transparent {
+    background-color: transparent;
+}
+
+footer{
+    display: none;
+}
+
+/* TEST CSS */
+
+.new-loading {
+    background-image: url("images/galaxy.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.rocket {
+    position: fixed;
+    bottom: 33%;
+    right: 10%;
+    width: 470px;
+    height: auto;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+    -webkit-filter: FlipH;
+            filter: FlipH;
+    -ms-filter: "FlipH";
+    z-index: 1;
+}
+
+.loading-text {
+    font-size: 23px;
+    padding-top: 5%;
+    z-index: 40;
+}
+
+.jumbo {
+    background-image: url('images/galaksija-min.png');
+    background-size: cover;
+    width: 100vw;
+    padding-left: 200px;
+    height: 600px;
+    /* parralax efekat
+   background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  */
+}
+
+.text-purple {
+    color: var(--color-purple)!important;
+}
+
+
+/* Prikaz samo za kompjutere */
+
+@media (min-width: 992px) {
+    .jumbo {
+        padding-top: 10%;
+        padding-bottom: 2%;
+    }
+    .logo {
+        margin-top: -60px;
+    }
+}
+
+
+/* Prikaz za tablete i telefone */
+
+@media(max-width: 991px) {
+    .mainmenu {
+        z-index: 9996;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        display: none;
+        opacity: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.95);
+        font-size: 25px;
+        animation: fadeIn 0.4s ease-in-out;
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        -webkit-animation: fadeIn 0.4s ease-in-out;
+        text-align: center;
+    }
+    .loadingtext {
+        font-size: 2.5rem;
+    }
+    .jumbo {
+        max-height: 100vh;
+    }
+    .hamburger-icon {
+        display: inline-block;
+        z-index: 10001;
+    }
+    .mainmenu a {
+        text-align: center;
+        -webkit-animation: slideDown 1s;
+                animation: slideDown 1s;
+        font-size: 26px;
+    }
+    .opacity {
+         opacity: 1;
+    }
+    .mainmenu ul {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    .logo{
+        margin-top: 1%;
+    }
+}
